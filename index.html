@@ -6,204 +6,125 @@
     <title>Document</title>
   </head>
   <style>
-    html {
-      height: 100%;
-    }
+    body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica', sans-serif;
+	background: rgb(26, 188, 156);
+	background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: linear-gradient(#141e30, #243b55);
-    }
+h1 {
+	font-size: 24px;
+	margin: 10px 0 0 0;
+	font-weight: lighter;
+	text-transform: uppercase;
+	color: #eeeeee;
+}
 
-    .login-box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 400px;
-      padding: 40px;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.5);
-      box-sizing: border-box;
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
-    }
+p {
+	font-size: 12px;
+	font-weight: light;
+	color: #333333;
+}
 
-    .login-box h2 {
-      margin: 0 0 30px;
-      padding: 0;
-      color: #fff;
-      text-align: center;
-    }
+span a {
+	font-size: 18px;
+	color: #cccccc;
+	text-decoration: none;
+	margin: 0 10px;
+	transition: all 0.4s ease-in-out;
+	&:hover {
+		color: #ffffff;
+	}
+}
 
-    .login-box .user-box {
-      position: relative;
-    }
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
 
-    .login-box .user-box input {
-      width: 100%;
-      padding: 10px 0;
-      font-size: 16px;
-      color: #fff;
-      margin-bottom: 30px;
-      border: none;
-      border-bottom: 1px solid #fff;
-      outline: none;
-      background: transparent;
-    }
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
-    .login-box .user-box label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 10px 0;
-      font-size: 16px;
-      color: #fff;
-      pointer-events: none;
-      transition: 0.5s;
-    }
+.avatar {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
 
-    .login-box .user-box input:focus ~ label,
-    .login-box .user-box input:valid ~ label {
-      top: -20px;
-      left: 0;
-      color: #03e9f4;
-      font-size: 12px;
-    }
+.content {
+	width: 100%;
+	max-width: 600px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
 
-    .login-box form a {
-      position: relative;
-      display: inline-block;
-      padding: 10px 20px;
-      color: #03e9f4;
-      font-size: 16px;
-      text-decoration: none;
-      text-transform: uppercase;
-      overflow: hidden;
-      transition: 0.5s;
-      margin-top: 40px;
-      letter-spacing: 4px;
-    }
-
-    .login-box a:hover {
-      background: #03e9f4;
-      color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-        0 0 100px #03e9f4;
-    }
-
-    .login-box a span {
-      position: absolute;
-      display: block;
-    }
-
-    .login-box a span:nth-child(1) {
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #03e9f4);
-      animation: btn-anim1 1s linear infinite;
-    }
-
-    @keyframes btn-anim1 {
-      0% {
-        left: -100%;
-      }
-
-      50%,
-      100% {
-        left: 100%;
-      }
-    }
-
-    .login-box a span:nth-child(2) {
-      top: -100%;
-      right: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(180deg, transparent, #03e9f4);
-      animation: btn-anim2 1s linear infinite;
-      animation-delay: 0.25s;
-    }
-
-    @keyframes btn-anim2 {
-      0% {
-        top: -100%;
-      }
-
-      50%,
-      100% {
-        top: 100%;
-      }
-    }
-
-    .login-box a span:nth-child(3) {
-      bottom: 0;
-      right: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(270deg, transparent, #03e9f4);
-      animation: btn-anim3 1s linear infinite;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes btn-anim3 {
-      0% {
-        right: -100%;
-      }
-
-      50%,
-      100% {
-        right: 100%;
-      }
-    }
-
-    .login-box a span:nth-child(4) {
-      bottom: -100%;
-      left: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(360deg, transparent, #03e9f4);
-      animation: btn-anim4 1s linear infinite;
-      animation-delay: 0.75s;
-    }
-
-    @keyframes btn-anim4 {
-      0% {
-        bottom: -100%;
-      }
-
-      50%,
-      100% {
-        bottom: 100%;
-      }
-    }
-  </style>
+.suppoprt-me {
+	display: inline-block;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 20vw;
+	max-width: 250px;
+	min-width: 200px;
+	z-index: 9;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+</style>
 
   <body>
-    <div class="login-box">
-      <h2>Login</h2>
-      <form>
-        <div class="user-box">
-          <input type="text" name="" required="" />
-          <label>Username</label>
-        </div>
-        <div class="user-box">
-          <input type="password" name="" required="" />
-          <label>Password</label>
-        </div>
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a>
-      </form>
-    </div>
+   <div class="container">
+	<div class="avatar">
+		<a href="https://codepen.io/MarioDesigns/">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png" alt="Skytsunami" />
+		</a>
+	</div>
+	<div class="content">
+		<h1>Waleed AlQahtani</h1>
+		<p>Follow me on:</p>
+		<p>
+			<span><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></span>
+			<span><a href="https://github.com//" target="_blank"><i class="fa fa-github"></i></a></span>
+			<span><a href="https://bitbucket.org//" target="_blank"><i class="fa fa-bitbucket"></i></a></span>
+			<span><a href="https://codepen.io//" target="_blank"><i class="fa fa-codepen"></i></a></span>
+		</p>
+		<p>BY: WaleedQ</p>
+	</div>
+</div>
+
+
   </body>
     <script>
     alert("hi");
