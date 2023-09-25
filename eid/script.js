@@ -25,7 +25,7 @@ var newFont = new FontFace(
   
       context.fillText(_name.trim(), 1480, 1500);
   
-      downloadBtn.download = "MOH_EidUlAdha2023.jpg";
+      downloadBtn.download = "RSADF_EidUlAdha2023.jpg";
       downloadBtn.href = canvas
         .toDataURL()
         .replace("image/png", "application/octet-stream");
