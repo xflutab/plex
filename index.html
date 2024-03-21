@@ -1,66 +1,178 @@
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>صفحة الزرين</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+      integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
-    </style>
+    <link rel="icon" type="image/x-icon" href="dev_24012.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="dev_24012.ico">
+
+
+    <title>WaleedQ</title>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0ME8WLNKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M0ME8WLNKF');
+</script>
   </head>
+  <style>
+    /*
+    .
+          background: linear-gradient(
+        134deg,
+        #7C96AB 1%,
+        #BFCCB5 100%
+      );
+    */
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Courier New", monospace;
+      background-image: linear-gradient(360deg, #9fab95 1%, #7c96abb5 100%),
+        url("background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin: 10px 0 0 0;
+      font-weight: lighter;
+      color: #eee;
+      text-shadow: 1.5px 1.5px 1.5px #000;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: light;
+      color: #000000;
+    }
+
+    i {
+      color: #1f1e1e;
+    }
+    span a {
+      font-size: 18px;
+      color: #cccccc;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    @keyframes float {
+      0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+      }
+      50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+      }
+      100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+      }
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 155px;
+      height: 155px;
+      box-sizing: border-box;
+      border: 3px white solid;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+      animation: float 5s ease-in-out infinite;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .content {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    h5 {
+      color: #333333;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0)
+      );
+    }
+  </style>
+
   <body>
     <div class="container">
-      <div class="px-4 py-5 my-5 text-center">
-        <img
-          class="d-block mx-auto mb-4"
-          src="MOD1.jpg"
-          alt=""
-          width="100"
-          height="100"
-        />
-        <h1 class="display-5 fw-bold text-body-emphasis">انشاء بطاقة معايدة</h1>
-        <div class="col-lg-6 mx-auto">
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <a href="MOD.html" class="btn btn-primary btn-lg px-4 gap-3">
-              بشعار وزارة الدفاع
-            </a>
-
-            <a href="RSADFAL.html" class="btn btn-primary btn-lg px-4 gap-3">
-              بشعار قوات الدفاع الجوي
-            </a>
-          </div>
-        </div>
-        <br />
-        <div class="col-lg-6 mx-auto">
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <a href="RSADF.html" class="btn btn-primary btn-lg px-4 gap-3">
-              بشعار قوات الدفاع الجوي - المجموعة الرابعة
-            </a>
-          </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
+      <div class="avatar">
+        <a href="#">
+          <img src="ezgif-2-3b55b4e89b.gif" style="width: 103%" />
+        </a>
+      </div>
+      <div class="content">
+        <h1>Waleed&nbsp;&nbsp;AlQahtani</h1>
+        <p style="font-size: large">Software Engineer</p>
         <hr />
+        <h5>
+          Saudi Arabia , Abha&nbsp;
+          <i class="fa fa-map-marker" aria-hidden="true"> </i>
+        </h5>
+
+        <br />
 
         <p>
-          بواسطة :
-          <a
-            href="https://wy.sa"
-            class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >WALEED ALQAHTANI</a
-          >
+          <span
+            ><a href="https://www.snapchat.com/add/wy.qt" target="_blank"
+              ><i class="fa fa-snapchat fa-2x"></i></a
+          ></span>
+          <span
+            ><a href="https://wa.me/+966532024446" target="_blank"
+              ><i class="fa fa-whatsapp fa-2x"></i></a
+          ></span>
+          <!--        <span
+            ><a href="https://bitbucket.org/" target="_blank"
+              ><i class="fa fa-envelope fa-2x"></i></a
+          ></span>  -->
         </p>
+        <p>Email : Waleed @ wy.sa</p>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
