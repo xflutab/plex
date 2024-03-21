@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بطاقة تهنئة</title>
+    <style>
+      .login {
+        background: #fff;
+        left: 50%;
+        border-radius: 5px;
+        border: 1px solid #0d8c60;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      #canvas {
+        max-width: 100%; /* تكبير الكانفاس ليمتلئ العرض */
+        height: auto; /* الارتفاع يتغير بناءً على العرض */
+      }
+    </style>
+    <!-- تضمين مكتبة Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="login">
+        <h1 class="text-center">انشاء بطاقة تهنئة</h1>
+
+        <canvas id="canvas" class="mt-3"></canvas><br />
+        <input
+          type="text"
+          id="name"
+          class="form-control mt-3"
+          placeholder="أدخل اسمك"
+        />
+        <a id="download" class="btn btn-primary mt-3" href="#">تنزيل الصورة</a>
+      </div>
+    </div>
+
+    <!-- تضمين مكتبة Bootstrap و jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- تضمين ملف JavaScript الخاص بك -->
+    <script src="scriptmod.js"></script>
+  </body>
+</html>
